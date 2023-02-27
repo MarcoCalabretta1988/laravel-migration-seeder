@@ -32,7 +32,7 @@
             <th scope="col">{{$train->code}}</th>
             <th scope="col">{{$train->n_carriages}}</th>
             <th scope="col">{{$train->in_time ? 'In orario' : 'In ritardo'}}</th>
-            <th scope="col">{{$train->delete ? 'Cancellato' : 'In viaggio'}}</th>      
+            <th scope="col">{{$train->delete ? 'Cancellato' : 'Confermato'}}</th>      
         </tr>
         @endforeach
     </tbody>
