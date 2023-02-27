@@ -7,9 +7,11 @@
     <title>{{ env('APP_NAME')}} | @yield('title')</title>
 
     @yield('cdns')
+
+    @Vite('resources/js/app.js')
 </head>
 <body>
-    <header></header>
+   @include('includes.header')
     <main>
         @yield ('content')
     </main>
