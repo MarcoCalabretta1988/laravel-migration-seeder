@@ -7,7 +7,7 @@
 <div class="container py-5">
    <section id="train-board">
 
-       <table class="table">
+       <table class="table text-center">
            <thead>
                <tr>
                    <th scope="col">Compagnia</th>
