@@ -4,19 +4,40 @@
 
 @section ('content')
 
-<h1>HOME</h1>
-@foreach ($trains as $train )
-    <ul>
-        <li>{{$train->company }}</li>
-        <li>{{$train->departed_station}}</li>
-        <li>{{$train->arrival_station}}</li>
-        <li>{{$train->departure_time}}</li>
-        <li>{{$train->arrival_time}}</li>
-        <li>{{$train->code}}</li>
-        <li>{{$train->n_carriages}}</li>
-        <li>{{$train->in_time}}</li>
-        <li>{{$train->delete}}</li>
-    </ul>
-@endforeach
+<div class="container py-5">
+   <section id="train-board">
+
+       <table class="table">
+           <thead>
+               <tr>
+                   <th scope="col">Compagnia</th>
+            <th scope="col">Stazione di Partenza</th>
+            <th scope="col">Stazione di Arrivo</th>
+            <th scope="col">Orario di Partenza</th>
+            <th scope="col">Orario di Arrivo</th>
+            <th scope="col">Codice</th>
+            <th scope="col">Numero Carrozze</th>
+            <th scope="col">Ritardo</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($trains as $train )
+        <tr>
+            <th scope="col"> {{$train->company }}</th>
+            <th scope="col">{{$train->departed_station}}</th>
+            <th scope="col">{{$train->arrival_station}}</th>
+            <th scope="col">{{$train->departure_time}}</th>
+            <th scope="col">{{$train->arrival_time}}</th>
+            <th scope="col">{{$train->code}}</th>
+            <th scope="col">{{$train->n_carriages}}</th>
+            <th scope="col">{{$train->in_time ? 'In orario' : 'In ritardo'}}</th>
+            <th scope="col">{{$train->delete ? 'Cancellato' : 'In viaggio'}}</th>      
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+</section>
+</div>
 @endsection
     

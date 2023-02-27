@@ -1,0 +1,19 @@
+main {
+    background-image: url('../img/stationbg.jpg');
+    background-size: cover;
+    min-height: calc(100vh - 56px);
+
+    #train-board {
+        background-color: black;
+        padding: 30px;
+        border: 15px solid #666;
+        border-radius: 20px;
+
+        th {
+            font-family: 'VT323', monospace;
+            font-size: 25px;
+            color: orange;
+        }
+    }
+
+}
